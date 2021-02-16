@@ -1,0 +1,13 @@
+<%@tasks.each do |task|%>
+  <p>
+  <%=link_to '🗑️', task_path(task), method: :delete %>
+  <%=task.completed == true ? '✅' : '😅'%>
+  <%=link_to(task.title, task_path(task.id))%>
+
+
+  </p>
+<%end%>
+
+<br>
+<%= link_to('New task', task_new_path) %>
+<br>

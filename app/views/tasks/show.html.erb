@@ -1,0 +1,15 @@
+<h1>My TO DO's details</h1>
+</ol>
+  <li>Title: <%= @task.title %></li>
+  <li>Details: <%= @task.details %></li>
+  <li>Status: <%= 'Done' if @task.completed == true %></li>
+<ol>
+
+<div>
+<%= link_to('Update task', task_edit_path) %>
+</div>
+<br>
+<div>
+<%= link_to('Back to task overview', tasks_path) %>
+</div>
+
